@@ -1,6 +1,5 @@
 # CBIO Cordapp
 
-
 ## Set up
 
 1. Download and install a JDK 8 JVM (minimum supported version 8u131)
@@ -31,20 +30,46 @@ Once you've finished the CorDapp's code, run it with the following steps:
     * macOS:     `build/nodes/runnodes`
     * linux:     `./deploy.sh`
 
-## Flows:
+## Components
 
-##### Issue:
-    
+### CbioState
+
+States define shared facts on the ledger. Our state, CbioState, will define a CBIO. 
+It will have the following structure:
+
+    -------------------
+    |                 |
+    |   CbioState     |
+    |                 |
+    |   - owner       |
+    |   - amount      |
+    |   - paidValue   |
+    |   - lastOwner   |
+    -------------------
+
+### CbioContract
+
+Contracts govern how states evolve over time. Our contract, CbioContract,
+will define how CbioStates evolve. 
+
+### CbioIssueInitiatorFlow
+
+
+### CbioMoveInitiatorFlow
+
+### CbioRedeemInitiatorFlow
+
+
+## Commands 
+### Issue:
     flow start CbioIssueFlowInitiator typeFuel: "E1GC", qtyEmission: 1000, qtyReagent: 300
-    
-##### Move
 
+### Move
     flow start CbioMoveFlowInitiator newOwner: Petrobras, amount: 500, paidValue: 1000
 
-##### Redeem
-
+### Redeem
     flow start CbioRedeemFlowInitiator amount: 100
 
-* Vault Query:
+### Vault Query:
 
-    `run vaultQuery contractStateType: contracts.CbioState`
+    run vaultQuery contractStateType: cbio.contracts.CbioState
