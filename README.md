@@ -62,6 +62,7 @@ will define how CbioStates evolve.
 
 ## Commands 
 ### Issue:
+    //Acceptable values for typeFuel E1GC,E1GM,E2G,BIODIESEL,E1G2G,
     flow start CbioIssueFlowInitiator typeFuel: "E1GC", qtyEmission: 1000, qtyReagent: 300
 
 ### Move
