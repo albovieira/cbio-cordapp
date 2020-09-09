@@ -1,11 +1,7 @@
-# Cenario 1
-* Emissao cbio
-
-# Cenario 2 
-* Transferencia entre empresas
-
-# Cenario 3
-* Aposentadoria do cbio
+# Flows
+ - Emissao CBIO
+ - Transferencia entre empresas
+ - Aposentadoria do CBIO
 
 ##### Issue
 
@@ -20,6 +16,6 @@
     flow start CbioRedeemFlowInitiator amount: 100
     
     
-* Vault Query:
+##### Vault Query:
 
-    `run vaultQuery contractStateType: contracts.CbioState`
+    `run vaultQuery contractStateType: cbio.contracts.CbioState`

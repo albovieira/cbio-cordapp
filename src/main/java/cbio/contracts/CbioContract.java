@@ -20,7 +20,7 @@ public class CbioContract implements Contract {
             verifyMove(tx);
         }
         if(tx.getCommand(0).getValue() instanceof  Commands.Redeem) {
-            verifyRedeem(tx);
+            verifyMove(tx);
         }
     }
 

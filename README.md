@@ -31,10 +31,10 @@ Once you've finished the CorDapp's code, run it with the following steps:
     * macOS:     `build/nodes/runnodes`
     * linux:     `./deploy.sh`
 
-* Complete basic flow:
+## Flows:
 
-##### Issue
-
+##### Issue:
+    
     flow start CbioIssueFlowInitiator typeFuel: "E1GC", qtyEmission: 1000, qtyReagent: 300
     
 ##### Move

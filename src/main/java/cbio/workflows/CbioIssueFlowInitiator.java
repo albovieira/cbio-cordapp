@@ -47,7 +47,7 @@ public class CbioIssueFlowInitiator extends FlowLogic<SignedTransaction> {
         // it converts fuel to cbio
         int factorEmission = Factors.getCarbonEmissionsFactor(typeFuel);
         int factorReagent = Factors.getCarbonReagentFactor(typeFuel);
-        final int amount = qtyEmission * factorEmission - qtyReagent * factorReagent;
+        final int amount = (qtyEmission * factorEmission ) - (qtyReagent * factorReagent);
 
         if(amount <= 0) {
             throw new FlowException("Cbio amount must be greather than 0");
