@@ -10,7 +10,6 @@ public class Factors {
     public static int getCarbonEmissionsFactor(String typeFuel) throws FlowException {
         return Factors.getFuelFactors(typeFuel).getInt("carbonEmissionsFactor");
     }
-
     public static int getCarbonReagentFactor(String typeFuel) throws FlowException {
         return Factors.getFuelFactors(typeFuel).getInt("carbonReagentFactor");
     }
